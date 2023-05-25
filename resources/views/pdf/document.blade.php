@@ -47,7 +47,7 @@
         </thead>
         <tbody>
             <tr>
-                <td>{{ $customer->cedula }}</td>
+                <td>{{ $customer->ci }}</td>
                 <td>{{ $customer->nombre }}</td>
             </tr>
         </tbody>

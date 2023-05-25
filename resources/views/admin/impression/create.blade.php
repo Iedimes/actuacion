@@ -22,17 +22,6 @@
 
                 <div class="card-body">
                     @include('admin.impression.components.form-elements')
-                    @if (session('message'))
-            <div class="alert alert-success text-center mt-3" id="flash-message">
-                {{ session('message') }}
-            </div>
-
-            <script>
-                setTimeout(function() {
-                    $('#flash-message').fadeOut('fast');
-                }, 10000); // tiempo en milisegundos
-            </script>
-        @endif
                 </div>
 
                 <div class="card-footer">
@@ -41,6 +30,18 @@
                         GENERAR INFORME
                     </button>
                 </div>
+
+                @if (session('message'))
+                <div class="alert alert-success text-center mt-3" id="flash-message">
+                    {{ session('message') }}
+                </div>
+
+                <script>
+                    setTimeout(function() {
+                        $('#flash-message').fadeOut('fast');
+                    }, 10000); // tiempo en milisegundos
+                </script>
+            @endif
 
             </form>
         </impression-form>
